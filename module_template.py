@@ -1,82 +1,46 @@
-# ----------------------
-# Usage of this program:
-# ----------------------
-# Delete the examples, and replace with the code you need. 
-# This template is essentially how every python program is structured, maybe bits and pieces are swapped
-# but this is best practice. Any piece can be omitted, 
-# just please delete the sleep functions so your code isn't slow! 
+"""module_template
 
+This file has no functionality. It's purpose is to document 
+the python document structure that will achieve the best results. 
+Following pep convention, it serves as a guide and is not forced upon. 
 
-# -------
-# Imports
-# -------
-# Put your import at the beginning of your python program.
-# Any libraries you installed with pip can be imported here. 
-# You can also import your own code if it is properly structured as modules. 
-# If you need a good tutorial, this one seems adequate: 
-# https://www.digitalocean.com/community/tutorials/how-to-write-modules-in-python-3
-# 
-# ex:
-import time
+If you would like to see detailed examples of python modules, go to the 
+examples folder. It contains trivial examples such as hello_world.py as well as
+real-world examples that I will most likely copy and use in the future,
+such as initial setups for tools such as BeautifulSoup, Flask, etc. 
 
-# ---------------------------
-# Accessing imports globally
-# ---------------------------
-# You can access the imports as variables of the same name. 
-# With this example, time is accessed and printed, most likely as module information. 
-#
-# ex:
-print(time)
+If you have any examples that would be worth adding, read the contributing section to
+see how to contribute to this repository. 
+"""
 
-# Time happens to be an object that has the method sleep. 
-# You can call methods globally, and it will run on call/import
-# 
-# ex:
-time.sleep(10) # sleeps for 10 seconds
+"""Import statements
 
+Most of the time, these appear at the top of your python program. 
+You can use libraries that you import
+"""
+#import time
 
-# ----------------
-# Global Variables
-# ----------------
-# Declaring variables that not wrapped by def: or class: are global variables
-# They can be accessed by any succeeding defs or classes. 
-# They can also be accessed as an export to other programs. To "hide" as an export, 
-# start the variable name with an underscore (ex: _counter = 0).
-# 
-# ex:
-x = 5
-y = 10
-z = x+y
+"""function definitions
 
-# --------------------
-# Function definitions
-# --------------------
-# Make your own functions. These can be accessed when imported.  
-#
-# ex: 
-def hello():
-  return "Hello! " + z
-#
-# if I wanted to import this I will do this in another python file:
-# 
-# import module_template
-# print(module_template.hello())
-# 
+you can technically write python without ever using functions,
+however it is better to modularize your code and functions are
+the best way to do it in python (I personally dislike python classes)
+"""
 
+# def hello(x):
+#   print("Hello", x)  
 
-# --------------
-# Main functions
-# --------------
-# If you are familiar with C, you know that there is an int main function that has to be in every C program.
-# Python does not require this, however it is good practice to do separate things for main. 
-# To do this, use the following template:
-#
-# this will be called when running the program in python: python module_template.py
-# it will NOT be called when importing: import module_template
-# everything else will run when importing except for that if statement. 
-#
+"""main function
 
-if __name__ == "__main__":
-   print(hello()) 
-    # replace hello() with what you would like to run in main. 
+Rather than forcing a main function, python lets you run things globally.
 
+ex: you can do assignment statements without having to be inside a function
+x = y + z
+
+This may be ok for scripting, but it's bad when the file is a module. 
+If you want to have something run only when called via `python file.py`
+and not via importing like `import file`, use this.
+"""
+
+# if __name__ == "__main__":
+#   print(hello("world"))
