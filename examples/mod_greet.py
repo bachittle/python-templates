@@ -1,4 +1,7 @@
 def greet(user):
+    """Greet a user in the command line.
+    Says hi, and adds an exclamation mark to sound more excited to meet the user. 
+    """
     print(f"Hello {user}!")
 
 if __name__ == "__main__":
